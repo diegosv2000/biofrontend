@@ -30,9 +30,9 @@ const useStyles = makeStyles({
         background: 'white',
         boxShadow: '4px 4px 8px rgba(172, 172, 172, 0.2)',
       },
-      "&::placeholder":{
-        color:'#ADAEBB'
-      }
+      '&::placeholder': {
+        color: '#ADAEBB',
+      },
     },
   },
 });
@@ -44,7 +44,12 @@ const Search = (props) => {
       <div className="icon-container">
         <SearchIcon sx={{ color: '#ADAEBB', fontSize: 25 }} />
       </div>
-      <input placeholder={props.placeholder} onKeyUp={props.onChange} />
+      <input
+        placeholder={props.placeholder}
+        onKeyUp={props.onChange}
+        onChange={props.onChange}
+        onKeyDown={props.onChange}
+      />
     </div>
   );
 };

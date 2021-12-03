@@ -4,3 +4,4 @@ export { default as Input } from './Input';
 export { default as PreviewVideo } from './PreviewVideo';
 export { default as Search } from './Search';
 export { default as Spinner } from './Spinner';
+export { default as Footer } from './Footer';

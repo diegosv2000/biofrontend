@@ -1,7 +1,19 @@
 import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { Input, Button } from 'components';
+import Swal from 'sweetalert2';
 import { useEffect, useState } from 'react';
+
+const verifEmail = (email) => {
+  const emailArray = email.split('@');
+  const reg = /^[0-9]+$/;
+  return (
+    emailArray.length === 2 &&
+    reg.test(emailArray[0]) &&
+    emailArray[0].length === 8 &&
+    emailArray[1] === 'continental.edu.pe'
+  );
+};
 
 const useStyles = makeStyles({
   signUpContainer: {
@@ -45,24 +57,32 @@ const SignUp = ({ setShowSignIn }) => {
   };
   const sendData = async (e) => {
     e.preventDefault();
-    const credentials = JSON.stringify(data);
+    if (verifEmail(data.email)) {
+      const credentials = JSON.stringify(data);
 
-    const config = {
-      method: 'post',
-      url: 'https://us-central1-bioarticular.cloudfunctions.net/app/api/users/',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      data: credentials,
-    };
+      const config = {
+        method: 'post',
+        url: 'https://us-central1-bioarticular.cloudfunctions.net/app/api/users/',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        data: credentials,
+      };
 
-    axios(config)
-      .then(function (response) {
-        setMessage(response.data.message);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      axios(config)
+        .then(function (response) {
+          setMessage(response.data.message);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    } else {
+      Swal.fire(
+        'Correo inválido!',
+        'El correo no tiene acceso al sitio web.',
+        'warning'
+      );
+    }
   };
   useEffect(() => {
     if (message !== null) {

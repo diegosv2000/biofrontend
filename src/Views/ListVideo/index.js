@@ -4,7 +4,7 @@ import { Button, Search, Spinner } from 'components';
 import { useEffect, useState } from 'react';
 import ListContainer from './components/ListContainer';
 
-const useStyles = makeStyles((theme)=>({
+const useStyles = makeStyles((theme) => ({
   listVideoContainer: {
     width: '100%',
     padding: '3rem',
@@ -41,26 +41,30 @@ const ListVideo = () => {
       });
   }, []);
   const searchVideo = (e) => {
-    setList(
+    if (
       auxList.filter((element) =>
         element.title.stringValue
           .toLowerCase()
           .includes(e.target.value.toLowerCase())
-      ).length !== 0
-        ? auxList.filter((element) =>
-            element.title.stringValue
-              .toLowerCase()
-              .includes(e.target.value.toLowerCase())
-          )
-        : auxList
-    );
+      ).length === 0
+    ) {
+      setList(auxList);
+    } else {
+      const filtered = auxList.filter((element) =>
+        element.title.stringValue
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase())
+      );
+      setList(filtered);
+    }
+
     if (e.target.value === '') {
       setList(auxList);
     }
   };
   return (
     <div className={classes.listVideoContainer}>
-      <Search placeholder="Busca un video" onChange={searchVideo} />
+      <Search placeholder="Busca una articulación" onChange={searchVideo} />
       {list === null ? <Spinner /> : <ListContainer list={list} />}
     </div>
   );

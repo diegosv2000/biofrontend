@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     gridGap: '30px',
     padding: '3rem',
-    alignItems: 'center',    [theme.breakpoints.down('xs')]: {
+    alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
       padding: '2rem',
     },
   },
@@ -249,6 +250,7 @@ const PlayerVideo = () => {
                 playing={false}
                 width="100%"
                 controls={true}
+                light={true}
               />
             </div>
           </div>

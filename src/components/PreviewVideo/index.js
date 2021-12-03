@@ -9,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: '150px',
     display: 'flex',
-    background: 'white',
+    background: 'transparent',
     transition: '.2s',
     cursor: 'pointer',
     '&:hover': {
-      background: '#F9F9F9',
+      background: 'rgb(0,0,0,0.05)',
     },
     '& img': {
       width: '200px',
@@ -28,18 +28,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   informationContainer: {
-    // width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     padding: '0 0 5px 1rem',
     '& h3': {
-      // whiteSpace: 'nowrap',
-      // textOverflow: 'ellipsis',
-      // overflow: 'hidden',
-      fontSize: '2rem',
+      fontSize: '25px',
       fontWeight: '500',
-      width: '100%',
       [theme.breakpoints.down('xs')]: {
         fontSize: '1rem',
       },
@@ -95,7 +90,6 @@ const PreviewVideo = ({ data, index }) => {
 
         <div className={classes.secondaryInfoContainer}>
           <p>YouTube • BioArticular</p>
-          <p>3 feb. 2016</p>
         </div>
       </div>
     </div>
