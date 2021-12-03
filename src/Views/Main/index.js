@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { useEffect, useState } from 'react';
-import Form from 'views/Form';
+import Form from 'Views/Form';
 import ListVideo from 'Views/ListVideo';
 
 const useStyles = makeStyles({
