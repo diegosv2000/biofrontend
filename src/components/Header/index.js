@@ -1,11 +1,10 @@
-import { makeStyles } from '@mui/styles';
-import LogoutIcon from '@mui/icons-material/Logout';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { makeStyles } from '@material-ui/core';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { ReactComponent as Bioarticular } from 'assets/icons/bioarticular.svg';
+import { ReactComponent as IsoBio } from 'assets/icons/isoBio.svg';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const theme = createTheme();
 const useStyles = makeStyles((theme) => ({
   headerContainer: {
     borderBottom: '1px solid #E9E9E9',
@@ -23,6 +22,20 @@ const useStyles = makeStyles((theme) => ({
     height: '3.5rem',
     '& >*': {
       height: '100%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      display:'none'
+    },
+  },
+  logo2: {
+    background: 'none',
+    display: 'none',
+    height: '3.5rem',
+    '& >*': {
+      height: '100%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      display:'block'
     },
   },
   logoutButton: {
@@ -47,7 +60,7 @@ const Header = () => {
   );
   const signOut = () => {
     localStorage.removeItem('isLoged');
-    navigate(-1);
+    navigate("/");
     setIsLoged(false);
   };
 
@@ -56,9 +69,12 @@ const Header = () => {
       <div className={classes.logo} onClick={() => navigate('')}>
         <Bioarticular />
       </div>
+      <div className={classes.logo2} onClick={() => navigate('')}>
+        <IsoBio />
+      </div>
       {isloged && (
         <button className={classes.logoutButton} onClick={signOut}>
-          <LogoutIcon /> <p>Salir</p>
+          <ExitToAppIcon /> <p>Salir</p>
         </button>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import Form from 'views/Form';
 import ListVideo from 'views/ListVideo';

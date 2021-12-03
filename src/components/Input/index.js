@@ -1,6 +1,6 @@
-import { makeStyles } from '@mui/styles';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import { makeStyles } from '@material-ui/core';
+import LockIcon from '@material-ui/icons/Lock';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles({
   inputContainer: {
@@ -64,9 +64,9 @@ const Input = (props) => {
       />
       <div className="icon-container">
         {props.iconType === 'password' ? (
-          <LockOutlinedIcon sx={{ color: '#171E29', fontSize: 18 }} />
+          <LockIcon sx={{ color: '#171E29', fontSize: 18 }} />
         ) : (
-          <PersonOutlineOutlinedIcon sx={{ color: '#171E29', fontSize: 18 }} />
+          <PersonIcon sx={{ color: '#171E29', fontSize: 18 }} />
         )}
       </div>
     </div>

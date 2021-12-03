@@ -1,5 +1,5 @@
-import { makeStyles } from '@mui/styles';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import { makeStyles } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles({
   searchContainer: {
@@ -42,7 +42,7 @@ const Search = (props) => {
   return (
     <div className={classes.searchContainer}>
       <div className="icon-container">
-        <SearchOutlinedIcon sx={{ color: '#ADAEBB', fontSize: 25 }} />
+        <SearchIcon sx={{ color: '#ADAEBB', fontSize: 25 }} />
       </div>
       <input placeholder={props.placeholder} onKeyUp={props.onChange} />
     </div>

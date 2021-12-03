@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import { useState } from 'react';
 import SignIn from './Signin';
 import SignUp from './SignUp';

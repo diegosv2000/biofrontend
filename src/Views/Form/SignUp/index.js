@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { Input, Button } from 'components';
 import { useEffect, useState } from 'react';
@@ -49,7 +49,7 @@ const SignUp = ({ setShowSignIn }) => {
 
     const config = {
       method: 'post',
-      url: 'http://localhost:5000/bioarticular/us-central1/app/api/users/',
+      url: 'https://us-central1-bioarticular.cloudfunctions.net/app/api/users/',
       headers: {
         'Content-Type': 'application/json',
       },

@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { Button, Search, Spinner } from 'components';
 import { useEffect, useState } from 'react';
@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 
 const config = {
   method: 'get',
-  url: 'http://localhost:5000/bioarticular/us-central1/app/api/listVideos',
+  url: 'https://us-central1-bioarticular.cloudfunctions.net/app/api/listVideos',
   headers: {
     'Content-Type': 'application/json',
   },

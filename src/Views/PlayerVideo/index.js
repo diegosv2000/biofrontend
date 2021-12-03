@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import axios from 'axios';
 import { Button, Spinner } from 'components';
 import { useEffect, useState } from 'react';
@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player';
 import { useParams, useNavigate } from 'react-router-dom';
 import { NotFound } from 'views';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   playerVideoContainer: {
     width: '100%',
     display: 'flex',
@@ -89,7 +89,7 @@ const useStyles = makeStyles({
       marginLeft: '2rem',
     },
   },
-});
+}));
 
 const PlayerVideo = () => {
   const classes = useStyles();
@@ -106,7 +106,7 @@ const PlayerVideo = () => {
 
     var config = {
       method: 'get',
-      url: 'http://localhost:5000/bioarticular/us-central1/app/api/videoInformation',
+      url: 'https://us-central1-bioarticular.cloudfunctions.net/app/api/videoInformation',
       headers: {
         'Content-Type': 'application/json',
       },

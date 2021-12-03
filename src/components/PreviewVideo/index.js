@@ -1,10 +1,10 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from '@material-ui/core';
 import { Spinner } from 'components';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import transformUrl from './utils/transformUrl';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   previewVideoContainer: {
     width: '100%',
     height: '150px',
@@ -19,10 +19,16 @@ const useStyles = makeStyles({
       width: '200px',
       borderRadius: '5px',
       border: '1px solid #c4c4c4',
+      [theme.breakpoints.down('xs')]: {
+        width: '120px',
+      },
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '90px',
     },
   },
   informationContainer: {
-    width: '100%',
+    // width: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -34,15 +40,21 @@ const useStyles = makeStyles({
       fontSize: '2rem',
       fontWeight: '500',
       width: '100%',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '1rem',
+      },
     },
   },
   secondaryInfoContainer: {
     color: '#5E5E5E',
     '& p': {
       fontSize: '20px',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '12px',
+      },
     },
   },
-});
+}));
 
 const PreviewVideo = ({ data, index }) => {
   const classes = useStyles();
