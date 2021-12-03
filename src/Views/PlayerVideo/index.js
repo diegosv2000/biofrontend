@@ -4,7 +4,7 @@ import { Button, Spinner } from 'components';
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { useParams, useNavigate } from 'react-router-dom';
-import { NotFound } from 'views';
+import { NotFound } from 'Views';
 
 const useStyles = makeStyles((theme) => ({
   playerVideoContainer: {

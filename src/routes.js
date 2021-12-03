@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main, NotFound, PlayerVideo} from 'views';
+import { Main, NotFound, PlayerVideo} from 'Views';
 
 const routes = [
   {
