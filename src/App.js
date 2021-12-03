@@ -3,19 +3,7 @@ import { Main, NotFound, PlayerVideo } from './views';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from 'components';
 
-const useStyles = makeStyles({
-  app: {
-    background: 'white',
-    height: 'calc(100vh - 6rem)',
-    paddingTop: '5.53rem',
-  },
-  container: {
-    width: '100%',
-  },
-});
-
 const App = () => {
-  const classes = useStyles();
   return (
     <Router>
       <Header />
