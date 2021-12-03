@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core';
-import { Main, NotFound, PlayerVideo } from 'views';
+import { Main, NotFound, PlayerVideo } from './views';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from 'components';
 
