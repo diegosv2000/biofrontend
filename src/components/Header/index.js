@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     top: '0',
     left: '0',
+    [theme.breakpoints.down('xs')]: {
+      padding: '1rem',
+    },
   },
   logo: {
     background: 'none',
@@ -24,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       height: '100%',
     },
     [theme.breakpoints.down('xs')]: {
-      display:'none'
+      display: 'none',
     },
   },
   logo2: {
@@ -35,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
       height: '100%',
     },
     [theme.breakpoints.down('xs')]: {
-      display:'block'
+      display: 'block',
     },
   },
   logoutButton: {
@@ -50,6 +53,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '.5rem',
     },
   },
+  headerContainerNL: {
+    borderBottom: '1px solid #E9E9E9',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '1rem 2.5rem',
+    width: '100%',
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+    },
+  },
 }));
 
 const Header = () => {
@@ -60,11 +73,12 @@ const Header = () => {
   );
   const signOut = () => {
     localStorage.removeItem('isLoged');
-    navigate("/");
+    navigate('');
+    window.location.reload();
     setIsLoged(false);
   };
 
-  return (
+  return isloged ? (
     <div className={classes.headerContainer}>
       <div className={classes.logo} onClick={() => navigate('')}>
         <Bioarticular />
@@ -72,11 +86,15 @@ const Header = () => {
       <div className={classes.logo2} onClick={() => navigate('')}>
         <IsoBio />
       </div>
-      {isloged && (
-        <button className={classes.logoutButton} onClick={signOut}>
-          <ExitToAppIcon /> <p>Salir</p>
-        </button>
-      )}
+      <button className={classes.logoutButton} onClick={signOut}>
+        <ExitToAppIcon /> <p>Salir</p>
+      </button>
+    </div>
+  ) : (
+    <div className={classes.headerContainerNL}>
+      <div>
+        <Bioarticular />
+      </div>
     </div>
   );
 };

@@ -10,10 +10,10 @@ const useStyles = makeStyles((theme) => ({
     height: '150px',
     display: 'flex',
     background: 'white',
-    transition: '.5s',
+    transition: '.2s',
     cursor: 'pointer',
-    '& :hover': {
-      background: '#FBFBFB',
+    '&:hover': {
+      background: '#F9F9F9',
     },
     '& img': {
       width: '200px',

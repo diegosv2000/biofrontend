@@ -4,7 +4,7 @@ import { Button, Search, Spinner } from 'components';
 import { useEffect, useState } from 'react';
 import ListContainer from './components/ListContainer';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   listVideoContainer: {
     width: '100%',
     padding: '3rem',
@@ -12,8 +12,11 @@ const useStyles = makeStyles({
     alignItems: 'center',
     flexDirection: 'column',
     gridGap: '2rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '2rem 1rem',
+    },
   },
-});
+}));
 
 const config = {
   method: 'get',

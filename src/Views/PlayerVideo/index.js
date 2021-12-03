@@ -13,7 +13,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     gridGap: '30px',
     padding: '3rem',
-    alignItems: 'center',
+    alignItems: 'center',    [theme.breakpoints.down('xs')]: {
+      padding: '2rem',
+    },
   },
   informationContainer: {
     width: '100%',
