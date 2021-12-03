@@ -1,0 +1,95 @@
+{
+  "urlId": "radio-cubital-distal",
+  "index": 1,
+  "posicion": "Miembro Superior",
+  "nombre": "Glenohumeral",
+  "caracteristicas": {
+    "tipo": "Sinovial (Enartrosis) Multiaxial",
+    "conformantes": [
+      "La cavidad geneidea (Cóncavo-Fijo)",
+      "la cabeza del húmero (Convexa-Móvil)"
+    ]
+  },
+  "planos_ejes": [
+    {
+      "plano": "Sagital",
+      "eje": "Frontal"
+    },
+    {
+      "plano": "Frontal",
+      "eje": "Sagital"
+    },
+    {
+      "plano": "Transversal",
+      "eje": "Longitudinal"
+    }
+  ],
+  "artrocinematica": {
+    "titulo": "Deslizamiento, Rodamiento y Rotación.",
+    "descripcion": "Su artrocinematica se va basar en el cabeza del húmero que se va deslizar, rotar y rodar sobre la cavidad glenoidea.",
+    "_comment": "Tomado del item numero 15 solo para ejemplo, en caso no tenga dejar lista vacia",
+    "subtitulos": [
+      {
+        "subtitulo": "FLEXIÓN",
+        "descripcion": "En una cadena cinética abierta el segmento óseo (tibia - móvil) ruedan y se deslizan en sentido posterior, es decir va en el mismo sentido de la superficie articular (fémur - fijo)"
+      },
+      {
+        "subtitulo": "EXTENSIÓN",
+        "descripcion": "En una cadena cinética cerrada el segmento óseo (fémur - móvil) se anterioriza y asciende, y la superficie articular rueda y se desliza hacia posterior en sentido opuesto a la superficie articular (tibia - fija)"
+      },
+      {
+        "subtitulo": "ROTACIÓN INTERNA",
+        "descripcion": "En la cadena cinética cerrada, el segmento óseo (fémur) ruieda y se desliza hacia interno y la superficie articular va en dirección opuesta osea va hacia externo."
+      },
+      {
+        "subtitulo": "ROTACIÓN EXTERNA",
+        "descripcion": "En la cadena cinética cerrada, el segmento óseo (fémur) ruieda y se desliza hacia externo y la superficie articular va en dirección opuesta osea va hacia interno."
+      }
+    ]
+  },
+  "ley_concavo_convexo": {
+    "_comment": "tomado del item 14 para ejemplo",
+    "leyes": [
+      {
+        "titulo": "LEY CONVEXO SOBRE  CÓNCAVO (Cadena Cinética Abierta):",
+        "descripcion": "Segmento ósea es opuesto al movimiento articular",
+        "ejemplos": [
+          "cabeza del fémur (convexa)(móvil)",
+          "fosa acetabular (cóncavo)(fijo)"
+        ]
+      }
+    ]
+  },
+
+  "ligamentos": ["Ligamento coracohumeral", "Ligamento Glenohumeral"],
+  "osteocinematica": [
+    {
+      "titulo": "Flexión",
+      "link": "https://youtu.be/kY854MJquEw"
+    },
+    {
+      "titulo": "Extension",
+      "link": "https://youtu.be/2gedBjc2jZc"
+    },
+    {
+      "titulo": "Aducción",
+      "link": "https://youtu.be/R8Y0ewBOP5w"
+    },
+    {
+      "titulo": "Abducción",
+      "link": "https://youtu.be/JotNAUlKPZo"
+    },
+    {
+      "titulo": "Rotación externa",
+      "link": "https://youtu.be/dGfWPLW1zDo"
+    },
+    {
+      "titulo": "Rotación interna",
+      "link": "https://youtu.be/JotNAUlKPZo"
+    },
+    {
+      "titulo": "Circunducción",
+      "link": "https://youtu.be/uSg03FvH79I"
+    }
+  ]
+}
