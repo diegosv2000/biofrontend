@@ -1,6 +1,6 @@
 import { Main, NotFound, PlayerVideo } from './Views';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from 'components';
+import { Footer, Header } from 'components';
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
         <Route exact path="/:videoId" element={<PlayerVideo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

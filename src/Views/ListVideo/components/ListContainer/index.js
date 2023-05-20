@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import { PreviewVideo, Spinner } from 'components';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles({
   listContainer: {
@@ -11,8 +12,6 @@ const useStyles = makeStyles({
   },
 });
 
-
-
 const ListContainer = ({ list }) => {
   const classes = useStyles();
   return list.length === 0 ? (
@@ -20,7 +19,7 @@ const ListContainer = ({ list }) => {
   ) : (
     <div className={classes.listContainer}>
       {list.map((element, index) => {
-        return <PreviewVideo key={index} data={element} index={index} />;
+        return <PreviewVideo key={index} data={element} />;
       })}
     </div>
   );

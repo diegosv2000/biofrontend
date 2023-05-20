@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PreviewVideo = ({ data, index }) => {
+const PreviewVideo = ({ data }) => {
   const classes = useStyles();
   const [urlImage, setUrlImage] = useState(null);
   const [information, setInformation] = useState(null);
@@ -71,7 +71,6 @@ const PreviewVideo = ({ data, index }) => {
       setUrlImage(transformUrl(information.urlVideo));
     }
   }, [information]);
-
   return data && information ? (
     <div
       className={classes.previewVideoContainer}
